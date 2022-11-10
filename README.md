@@ -1,2 +1,2 @@
 # PRAGUE-SPIRITS
-Prague Spirits Trophy - projekt Modelka
+Prague Spirits Trophy - projekt Koderka
