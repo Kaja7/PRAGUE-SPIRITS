@@ -1,0 +1,85 @@
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+
+$font-color: #0C0A07;
+
+$spacer: 30px;
+
+/*Nastavení Gridu*/
+.kontejner {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: 200px 100px 300px auto auto 200px;
+	gap: 20px;
+    grid-template-areas: 
+        "logo logo"
+        "menu menu"
+        "obrazek obrazek"
+        "text text"
+        "foto1 foto2"
+        "paticka paticka";
+}
+
+.header__logo {
+    grid-area: logo;
+}
+
+
+
+.header {
+
+    &__logo {
+        max-width: 30%;
+        margin: $spacer;
+    }
+    
+    &__title {
+        color: $font-color; //barva písma
+    }
+
+    &__menu {
+        margin: $spacer;
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+
+    
+
+    &__link {
+        color: $font-color;
+        padding: 15px;
+        text-decoration: none;
+
+        &:hover {
+            background-color: $font-color;
+            color: white;
+            border-radius: 20px;
+        }
+    }
+}
+
+.medals {
+    margin: $spacer;
+}
+
+.about {
+    margin: $spacer;
+}
+
+.people {
+    margin: $spacer;
+    
+    img {
+        width: 300px;
+        border-radius: 50%;
+    }
+   
+
+
+}
+
+

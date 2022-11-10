@@ -1,0 +1,64 @@
+@charset "UTF-8";
+html {
+  box-sizing: border-box;
+}
+
+*, ::before, ::after {
+  box-sizing: inherit;
+}
+
+/*Nastavení Gridu*/
+.kontejner {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 200px 100px 300px auto auto 200px;
+  gap: 20px;
+  grid-template-areas: "logo logo" "menu menu" "obrazek obrazek" "text text" "foto1 foto2" "paticka paticka";
+}
+
+.header__logo {
+  grid-area: logo;
+}
+
+.header__logo {
+  max-width: 30%;
+  margin: 30px;
+}
+.header__title {
+  color: #0C0A07;
+}
+.header__menu {
+  margin: 30px;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.header__link {
+  color: #0C0A07;
+  padding: 15px;
+  text-decoration: none;
+}
+.header__link:hover {
+  background-color: #0C0A07;
+  color: white;
+  border-radius: 20px;
+}
+
+.medals {
+  margin: 30px;
+}
+
+.about {
+  margin: 30px;
+}
+
+.people {
+  margin: 30px;
+}
+.people img {
+  width: 300px;
+  border-radius: 50%;
+}/*# sourceMappingURL=style.css.map */
