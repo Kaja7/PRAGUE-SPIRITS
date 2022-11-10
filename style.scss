@@ -6,25 +6,53 @@ $font-color: #0C0A07;
 $spacer: 30px;
 
 /*Nastavení Gridu*/
-.kontejner {
+/*.kontejner {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: 200px 100px 300px auto auto 200px;
-	gap: 20px;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto auto auto auto;
+	gap: 30px;
+    column-gap: 5%;
     grid-template-areas: 
-        "logo logo"
-        "menu menu"
+        "hlavicka hlavicka"
         "obrazek obrazek"
         "text text"
-        "foto1 foto2"
+        "sarka simon"
         "paticka paticka";
+}*/
+
+.header {
+    grid-area: hlavicka;
+
 }
 
-.header__logo {
-    grid-area: logo;
+.medals {
+    grid-area: obrazek;
 }
 
+.about {
+    grid-area: text;
+}
 
+.sarka {
+    grid-area: 4/1/4/1;
+    justify-self: right;
+}
+
+.simon {
+    grid-area: 4/2/4/2;
+    justify-self: left;
+}
+
+.footer {
+    grid-area: paticka;
+}
+/*Konec Nastavení Gridu*/
+
+.kontejner {
+    background-color: #F0EADD;
+}
 
 .header {
 
@@ -38,26 +66,29 @@ $spacer: 30px;
     }
 
     &__menu {
+        max-width: 80%;
         margin: $spacer;
+        margin-left: 15%;
+        margin-right: 15%;
         list-style: none;
         padding: 0;
         display: flex;
         justify-content: space-between;
         text-transform: uppercase;
-        font-size: 20px;
+        font-size: 25px;
     }
 
     
 
     &__link {
         color: $font-color;
-        padding: 15px;
+        padding: 20px;
         text-decoration: none;
 
         &:hover {
             background-color: $font-color;
             color: white;
-            border-radius: 20px;
+            border-radius: 30px;
         }
     }
 }
@@ -66,20 +97,61 @@ $spacer: 30px;
     margin: $spacer;
 }
 
-.about {
-    margin: $spacer;
+.medals__image {
+    max-width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
-.people {
+
+.about {
     margin: $spacer;
-    
+    max-width: 60%;
+    font-size: 20px;
+    text-align: center;
+}
+
+.simon,
+.sarka {
+    text-align: center;
+    line-height: 70%;
     img {
         width: 300px;
         border-radius: 50%;
+        border: 5px solid white;
+        box-shadow: #407BFF1F 0 4px 6px ;
     }
-   
-
 
 }
 
+.footer {
+    margin-top: $spacer*2;
+    width: 100%;
+    text-align: center;
+    background-color: #836724;
+    color: white;
+}
 
+
+/*Grid Judges*/
+.judges {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, (minmax(200px, 400px)));
+    grid-auto-flow: row;
+    justify-items: center;
+    align-items: center;
+  
+}
+
+/*Nastylování stránky Judges*/
+
+.judges {
+   
+    gap: 30px;
+ 
+}
+
+.judges__image {
+
+    max-width: 350px;
+}
